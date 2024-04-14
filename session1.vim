@@ -17,7 +17,7 @@ badd +154487 long_ci_fei.txt
 badd +28 jisuan_doyinzi_1.py
 badd +1 data/doyinzi.txt
 badd +1 zrmdb.txt
-badd +102 gen_aux_5.py
+badd +106 gen_aux_5.py
 badd +189 extend_ci.yaml
 badd +41066 tigress_ci.dict.yaml
 argglobal
@@ -25,6 +25,7 @@ argglobal
 $argadd long_ci_fei.txt
 edit long_ci_fei.txt
 argglobal
+balt extend_ci.yaml
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -35,7 +36,7 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 154487 - ((18 * winheight(0) + 18) / 37)
+let s:l = 154487 - ((17 * winheight(0) + 18) / 36)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -54,6 +55,7 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
