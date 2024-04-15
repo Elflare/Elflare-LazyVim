@@ -32,10 +32,10 @@ opt.clipboard = "unnamed"
 -- 设置 Neovim 的编码为 UTF-8
 vim.g.python_io_encoding = 'utf-8'
 
--- opt.fileencodings = "UTF-8"
--- opt.encoding = "UTF-8"
--- opt.termencoding = "utf-8"
--- opt.fileencoding = "UTF-8"
+opt.fileencodings = "UTF-8"
+opt.encoding = "UTF-8"
+opt.termencoding = "utf-8"
+opt.fileencoding = "UTF-8"
 vim.g.lang = {
     name = "zh_CN",
     encoding = "utf-8"
@@ -49,4 +49,5 @@ if vim.fn.exists "g:neovide" then
 end
 
 -- py3路径
-vim.g.python3_host_prog = 'D:/WorkRelevant/python-64/python.exe'
+vim.g.python3_host_prog = 'python.exe'
+

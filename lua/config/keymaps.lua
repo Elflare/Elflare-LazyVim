@@ -6,7 +6,11 @@ keymap.set("i", "jj", "<ESC>")
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 -- home end
 keymap.set("n", "H", "^")
+keymap.set("n", "dH", "d^")
+keymap.set("v", "H", "^")
 keymap.set("n", "L", "$")
+keymap.set("n", "dL", "d$")
+keymap.set("v", "L", "$")
 -- roll down
 keymap.set("n", "<C-j>", "<C-d>", {noremap = true, silent = true })
 keymap.set("n", "<C-s>", "<C-d>", {noremap = true, silent = true })
