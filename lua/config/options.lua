@@ -49,4 +49,4 @@ if vim.fn.exists "g:neovide" then
 end
 
 -- py3路径
-vim.g.python3_host_prog = 'D:/WorkRelevant/python/python.exe'
+vim.g.python3_host_prog = 'D:/WorkRelevant/python-64/python.exe'

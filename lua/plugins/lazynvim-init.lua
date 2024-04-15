@@ -11,23 +11,30 @@ require("lazy").setup({'Mofiqul/vscode.nvim', {
     -- Optional dependencies
     dependencies = {"nvim-tree/nvim-web-devicons"}
 }, 'neovim/nvim-lspconfig', 'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path', 'hrsh7th/cmp-cmdline',
-                       'hrsh7th/nvim-cmp', 'onsails/lspkind-nvim', "yehuohan/cmp-im", "yehuohan/cmp-im-zh",
-                       "nvim-treesitter/nvim-treesitter", "hrsh7th/cmp-vsnip", 'hrsh7th/vim-vsnip',
-                       'numToStr/Comment.nvim', "windwp/nvim-autopairs", "petertriho/nvim-scrollbar",
-                       'simnalamburt/vim-mundo',  "rcarriga/nvim-notify",
-{
-  "folke/noice.nvim",
-  event = "VeryLazy",
-  dependencies = {
-    "MunifTanjim/nui.nvim",
-    "rcarriga/nvim-notify",
-    }
-},{
-    "smjonas/inc-rename.nvim",
-    config = function()
-        require("inc_rename").setup()
-    end
-}, {
+    'hrsh7th/nvim-cmp', 'onsails/lspkind-nvim', "yehuohan/cmp-im", "yehuohan/cmp-im-zh",
+    "nvim-treesitter/nvim-treesitter", "hrsh7th/cmp-vsnip", 'hrsh7th/vim-vsnip',
+    'numToStr/Comment.nvim', "windwp/nvim-autopairs", "petertriho/nvim-scrollbar",
+    'simnalamburt/vim-mundo',  'nguyenvukhang/nvim-toggler',
+--     "rcarriga/nvim-notify",{
+--   "folke/noice.nvim",
+--   event = "VeryLazy",
+--   dependencies = {
+--     "MunifTanjim/nui.nvim",
+--     "rcarriga/nvim-notify",
+--     }
+-- },
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        build = function() vim.fn["mkdp#util#install"]() end,
+    },
+    {
+        "smjonas/inc-rename.nvim",
+        config = function()
+            require("inc_rename").setup()
+        end
+    }, {
     'goolord/alpha-nvim',
     dependencies = {'nvim-tree/nvim-web-devicons'},
     config = function()
