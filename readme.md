@@ -65,7 +65,7 @@
 配置文件在 `plugins.lspconfig`
 <br> **注:**  
 - 目前只做了 python 的, 用的是 pylsp
-- 在option 中的 `vim.g.python3_host_prog` 配置py3路径
+- 在option 中的 `vim.g.python3_host_prog` 配置py3路径 (有环境变量就直接配 `python`)
 
 |快捷键|功能|
 |------|----|
