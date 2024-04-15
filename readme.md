@@ -49,7 +49,7 @@
 |`<Space>` |确认第一个中文|
 ### nvim-Treesitter
 配置文件在 `plugins.nvim-treesitter`
-<br> **注** : 目前只做了 python 的
+<br> **注:**  目前只做了 python 的
 |快捷键|功能|
 |------|----|
 |`<CR>` |选择一段|
@@ -57,13 +57,13 @@
 |`<Tab>` |选择整个函数|
 ### neoformat
 配置文件在 `plugins.neoformat`
-<br> **注** : 目前只做了 python 的, 用的是 black
+<br> **注:**  目前只做了 python 的, 用的是 black
 |快捷键|功能|
 |------|----|
 |`<C-F>` |格式化|
 ### lspconfg
 配置文件在 `plugins.lspconfig`
-<br> **注** : 
+<br> **注:**  
 - 目前只做了 python 的, 用的是 pylsp
 - 在option 中的 `vim.g.python3_host_prog` 配置py3路径
 

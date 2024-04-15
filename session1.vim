@@ -25,7 +25,11 @@ argglobal
 $argadd long_ci_fei.txt
 edit long_ci_fei.txt
 argglobal
+<<<<<<< HEAD
 balt jisuan_doyinzi_1.py
+=======
+balt extend_ci.yaml
+>>>>>>> 6146027fa9e3b516de70ad371f6d925b6ba3ed16
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -36,7 +40,11 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
+<<<<<<< HEAD
 let s:l = 154488 - ((17 * winheight(0) + 18) / 36)
+=======
+let s:l = 154487 - ((17 * winheight(0) + 18) / 36)
+>>>>>>> 6146027fa9e3b516de70ad371f6d925b6ba3ed16
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
