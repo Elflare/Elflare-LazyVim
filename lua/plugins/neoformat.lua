@@ -5,12 +5,10 @@ vim.g.neoformat_python_black = {
   stdin = 1
 }
 
-vim.g.neoformat_json_prettier = {
-  exe = 'prettier',
-  args = {'-q', '-'},
-  stdin = 1
-}
 -- 启用 black 作为 Python 的格式化工具
 vim.g.neoformat_enabled_python = {'black'}
--- json
-vim.g.neoformat_enabled_json = {'json'}
+
+
+-- 如果需要，设置 formatprg 的等效命令
+vim.g.neoformat_try_formatprg = 1
+vim.g.neoformat_try_node_exe = 1
