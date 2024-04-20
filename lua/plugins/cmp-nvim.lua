@@ -58,7 +58,7 @@ cmp.setup(
         ),
         -- 根据文件类型来选择补全来源
         cmp.setup.filetype(
-            "yaml",
+            {"text", "yaml"},
             {
                 sources = cmp.config.sources(
                     {
@@ -69,12 +69,6 @@ cmp.setup(
                 )
             }
         ),
-        -- cmp.setup.filetype('yaml', {
-        --     sources = cmp.config.sources({
-        --         name = 'IM'
-        --     })
-        -- }),
-
         -- 命令模式下输入 `/` 启用补全
         cmp.setup.cmdline(
             "/",

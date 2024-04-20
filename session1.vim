@@ -19,14 +19,16 @@ badd +115 gen_aux_5.py
 badd +209 extend_ci.yaml
 badd +58468 tigress_ci.dict.yaml
 badd +3546 zrlong.dict.yaml
-badd +1 long_ci_fei_ou3.txt
-badd +2 data/doyinzi.txt
+badd +2 long_ci_fei_ou3.txt
+badd +74 data/doyinzi.txt
 badd +423 E:/OneDrive/backup/rime/公用/龙码/字频.txt
+badd +0 long_ci_fei.txt
 argglobal
 %argdel
 $argadd long_ci_fei.txt
 edit long_ci_fei_ou3.txt
 argglobal
+balt E:/OneDrive/backup/rime/公用/龙码/字频.txt
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -42,7 +44,7 @@ if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 1
-normal! 0
+normal! 013|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -56,6 +58,7 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
