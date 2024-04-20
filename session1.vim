@@ -13,19 +13,20 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +30 jisuan_doyinzi_1.py
+badd +29 jisuan_doyinzi_1.py
 badd +1 zrmdb.txt
-badd +145 gen_aux_5.py
-badd +189 extend_ci.yaml
-badd +24879 tigress_ci.dict.yaml
-badd +36601 zrlong.dict.yaml
-badd +117038 long_ci_fei_ou3.txt
+badd +115 gen_aux_5.py
+badd +209 extend_ci.yaml
+badd +58468 tigress_ci.dict.yaml
+badd +3546 zrlong.dict.yaml
+badd +1 long_ci_fei_ou3.txt
+badd +2 data/doyinzi.txt
+badd +423 E:/OneDrive/backup/rime/公用/龙码/字频.txt
 argglobal
 %argdel
 $argadd long_ci_fei.txt
 edit long_ci_fei_ou3.txt
 argglobal
-balt zrmdb.txt
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -36,12 +37,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 130363 - ((16 * winheight(0) + 16) / 33)
+let s:l = 1 - ((0 * winheight(0) + 18) / 36)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 130363
-normal! 022|
+keepjumps 1
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
