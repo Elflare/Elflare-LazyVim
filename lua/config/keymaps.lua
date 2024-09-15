@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 local keymap = vim.keymap
 -- 插入模式
-keymap.set("i", "jj", "<ESC>")
+-- keymap.set("i", "jj", "<ESC>")
 -- 取消高亮
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 -- home end
