@@ -94,7 +94,7 @@ require("lazy").setup(
             opts = {},
             -- stylua: ignore
             keys = {
-                {"/", mode = {"n", "x", "o"}, function()
+                {"Q", mode = {"n", "x", "o"}, function()
                         require("flash").jump()
                     end, desc = "Flash"},
                 {"?", mode = {"n", "x", "o"}, function()
