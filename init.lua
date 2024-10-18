@@ -79,17 +79,9 @@ else
     local opt = vim.opt
     opt.clipboard = "unnamed"
     require("config.keymaps")
-    require("plugins.lazynvim-init")
-    require("oil").setup()
-    require("plugins.cmp-nvim")
-    require("plugins/nvim-tree")
+    require("plugins.lazynvim-init-vscode")
     require("plugins/nvim-treesitter")
-    require("plugins.cmp-zh")
-    require("plugins.autopairs")
-    require("plugins.neoformat")
     require("plugins.nvim-toggler")
-    require("gitsigns").setup()
-    require("lualine").setup()
     require("Comment").setup(
         {
             toggler = {
