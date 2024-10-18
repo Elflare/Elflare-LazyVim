@@ -20,13 +20,13 @@ badd +38 zrmdb.txt
 badd +1 gen_aux_5.py
 badd +1 字频.txt
 badd +1 data/doyinzi.txt
-badd +275 extend_ci.yaml
+badd +276 extend_ci.yaml
 argglobal
 %argdel
 $argadd long_ci_fei_ou3.txt
-edit extend_ci.yaml
+edit long_ci_fei_ou3.txt
 argglobal
-balt long_ci_fei_ou3.txt
+balt extend_ci.yaml
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -37,12 +37,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 275 - ((15 * winheight(0) + 18) / 36)
+let s:l = 130127 - ((16 * winheight(0) + 16) / 33)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 275
-normal! 012|
+keepjumps 130127
+normal! 015|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -56,6 +56,7 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
