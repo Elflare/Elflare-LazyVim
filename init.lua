@@ -8,7 +8,6 @@ if not vim.g.vscode then
     -- require('vscode').load('dark')
     require("oil").setup()
     require("plugins.cmp-nvim")
-    -- require("plugins.cmp-config")
     require("plugins/nvim-tree")
     require("plugins/nvim-treesitter")
     require("plugins.cmp-zh")
@@ -18,16 +17,6 @@ if not vim.g.vscode then
     require("plugins.nvim-toggler")
     require("plugins.save-session")
     require("gitsigns").setup()
-    -- require("noice").setup({
-    --     lsp = {
-    --         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
-    --         override = {
-    --             ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-    --             ["vim.lsp.util.stylize_markdown"] = true,
-    --             ["cmp.entry.get_documentation"] = true -- requires hrsh7th/nvim-cmp
-    --
-    --     },
-    -- })
     require("bufferline").setup(
         {
             options = {
@@ -87,6 +76,8 @@ if not vim.g.vscode then
     )
 else
     -- vscode
+    local opt = vim.opt
+    opt.clipboard = "unnamed"
     require("config.keymaps")
     require("plugins.lazynvim-init")
     require("oil").setup()
@@ -98,16 +89,6 @@ else
     require("plugins.neoformat")
     require("plugins.nvim-toggler")
     require("gitsigns").setup()
-    -- require("noice").setup({
-    --     lsp = {
-    --         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
-    --         override = {
-    --             ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-    --             ["vim.lsp.util.stylize_markdown"] = true,
-    --             ["cmp.entry.get_documentation"] = true -- requires hrsh7th/nvim-cmp
-    --
-    --     },
-    -- })
     require("lualine").setup()
     require("Comment").setup(
         {
