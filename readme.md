@@ -8,6 +8,8 @@
 |`K`|换行 |
 |`H`|home |
 |`L`|end |
+|`<leader>nh`|去高亮 |
+|`<leader>v`|搜中文 |
 |`dH`|从该行往前删到头 |
 |`dL`|从该行往后删到尾 |
 ### save-session

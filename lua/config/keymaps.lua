@@ -4,6 +4,8 @@ local keymap = vim.keymap
 -- keymap.set("i", "jj", "<ESC>")
 -- 取消高亮
 keymap.set("n", "<leader>nh", ":nohl<CR>")
+-- flash搜中文
+keymap.set("n", "<leader>v", "/[\\u4E00-\\u9FA5]")
 -- home end
 keymap.set("n", "H", "^")
 keymap.set("n", "dH", "d^")
