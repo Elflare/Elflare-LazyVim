@@ -34,7 +34,7 @@ vim.g.python_io_encoding = 'utf-8'
 
 opt.fileencodings = "UTF-8"
 opt.encoding = "UTF-8"
-opt.termencoding = "utf-8"
+-- opt.termencoding = "utf-8"
 opt.fileencoding = "UTF-8"
 vim.g.lang = {
     name = "zh_CN",

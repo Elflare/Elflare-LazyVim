@@ -71,3 +71,4 @@ require("lazy").setup(
         }
     }
 )
+require("flash").toggle()

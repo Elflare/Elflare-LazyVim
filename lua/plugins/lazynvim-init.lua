@@ -14,7 +14,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup(
     {
-        "Mofiqul/vscode.nvim",
         {
             "stevearc/oil.nvim",
             opts = {},
@@ -94,12 +93,22 @@ require("lazy").setup(
             opts = {},
             -- stylua: ignore
             keys = {
-                {"Q", mode = {"n", "x", "o"}, function()
+                {
+                    "Q",
+                    mode = {"n", "x", "o"},
+                    function()
                         require("flash").jump()
-                    end, desc = "Flash"},
-                {"?", mode = {"n", "x", "o"}, function()
+                    end,
+                    desc = "Flash"
+                },
+                {
+                    "?",
+                    mode = {"n", "x", "o"},
+                    function()
                         require("flash").treesitter()
-                    end, desc = "Flash Treesitter"},
+                    end,
+                    desc = "Flash Treesitter"
+                },
                 {
                     "r",
                     mode = "o",
@@ -140,3 +149,6 @@ require("lazy").setup(
         }
     }
 )
+local Flash = require("flash")
+Flash.toggle()
+
