@@ -14,8 +14,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup(
     {
-        "nvim-treesitter/nvim-treesitter",
-        "hrsh7th/vim-vsnip",
         "numToStr/Comment.nvim",
         "nguyenvukhang/nvim-toggler",
         {
@@ -25,12 +23,14 @@ require("lazy").setup(
             opts = {},
             -- stylua: ignore
             keys = {
-                {"Q", mode = {"n", "x", "o"}, function()
+                {
+                    "Q",
+                    mode = {"n", "x", "o"},
+                    function()
                         require("flash").jump()
-                    end, desc = "Flash"},
-                {"?", mode = {"n", "x", "o"}, function()
-                        require("flash").treesitter()
-                    end, desc = "Flash Treesitter"},
+                    end,
+                    desc = "Flash"
+                },
                 {
                     "r",
                     mode = "o",
@@ -64,10 +64,6 @@ require("lazy").setup(
             config = function()
                 require("nvim-surround").setup({})
             end
-        },
-        {
-            "nvim-lualine/lualine.nvim",
-            dependencies = {"nvim-tree/nvim-web-devicons"}
         }
     }
 )

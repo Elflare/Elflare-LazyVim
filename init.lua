@@ -1,34 +1,10 @@
-if not vim.g.vscode then
-    -- 原生vim
-    require("config.options")
+if vim.g.vscode then
+    -- vscode
+    local opt = vim.opt
+    opt.clipboard = "unnamed"
     require("config.keymaps")
-    require("plugins.lazynvim-init")
-    require("plugins.lspconfig")
-    vim.cmd("colorscheme nightfox")
-    -- require('vscode').load('dark')
-    require("oil").setup()
-    require("plugins.cmp-nvim")
-    require("plugins/nvim-tree")
-    require("plugins/nvim-treesitter")
-    require("plugins.cmp-zh")
-    require("plugins.autopairs")
-    require("plugins.neoformat")
-    require("plugins.telescope")
+    require("plugins.lazynvim-init-vscode")
     require("plugins.nvim-toggler")
-    require("plugins.save-session")
-    require("gitsigns").setup()
-    require("bufferline").setup(
-        {
-            options = {
-                -- 设置缓冲区标签的最大宽度
-                max_name_length = 15, -- 例如，将标签的最大长度设置为20个字符
-                -- 设置缓冲区标签的最小宽度
-                tab_size = 4
-            }
-        }
-    )
-    require("scrollbar").setup()
-    require("lualine").setup()
     require("Comment").setup(
         {
             toggler = {
@@ -75,13 +51,36 @@ if not vim.g.vscode then
         }
     )
 else
-    -- vscode
-    local opt = vim.opt
-    opt.clipboard = "unnamed"
+    -- 原生vim
+    require("config.options")
     require("config.keymaps")
-    require("plugins.lazynvim-init-vscode")
+    require("plugins.lazynvim-init")
+    require("plugins.lspconfig")
+    vim.cmd("colorscheme nightfox")
+    -- require('vscode').load('dark')
+    require("oil").setup()
+    require("plugins.cmp-nvim")
+    require("plugins/nvim-tree")
     require("plugins/nvim-treesitter")
+    require("plugins.cmp-zh")
+    require("plugins.autopairs")
+    require("plugins.neoformat")
+    require("plugins.telescope")
     require("plugins.nvim-toggler")
+    require("plugins.save-session")
+    require("gitsigns").setup()
+    require("bufferline").setup(
+        {
+            options = {
+                -- 设置缓冲区标签的最大宽度
+                max_name_length = 15, -- 例如，将标签的最大长度设置为20个字符
+                -- 设置缓冲区标签的最小宽度
+                tab_size = 4
+            }
+        }
+    )
+    require("scrollbar").setup()
+    require("lualine").setup()
     require("Comment").setup(
         {
             toggler = {
