@@ -20,8 +20,6 @@ keymap.set({"n", "v"}, "<C-j>", "<C-d>", {noremap = true, silent = true})
 -- roll up
 keymap.set({"v", "n"}, "<C-k>", "<C-u>", {noremap = true, silent = true})
 -- 删除整行
--- 设置普通模式下的键映射
-keymap.set("n", "<C-D>", "dd")
 -- 设置插入模式下的键映射
 keymap.set("i", "<C-D>", "<Esc>ddi")
 keymap.set("n", "<C-h>", "^")
