@@ -3,9 +3,9 @@ local opt = vim.opt
 opt.relativenumber = true
 opt.number = true
 -- 缩进
-opt.tabstop = 4
-opt.shiftwidth = 4
-opt.expandtab = true
+-- opt.tabstop = 4
+-- opt.shiftwidth = 4
+-- opt.expandtab = true
 opt.autoindent = true
 opt.list = true
 -- 防止包裹
