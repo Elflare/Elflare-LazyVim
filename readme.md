@@ -1,8 +1,8 @@
-# 我的nvim-config
+# My Neonvim Config
 
-## 记下快捷键免得忘
+## Shortcut Keys
 
-### 全局
+### Global
 
 | 快捷键       | 功能             | 备注         |
 | ------------ | ---------------- | ------------ |
