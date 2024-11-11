@@ -43,11 +43,20 @@ function loadSession(number)
         -- 如果文件存在，则执行 :source 命令加载会话
         vim.cmd('source ' .. session_file)
     else
-        -- 如果文件不存在，则显示错误信息
-        vim.api.nvim_err_writeln("Session file not found: " .. session_file)
+        -- 如果文件不存在，则Ruturn
+        return
+        -- vim.api.nvim_err_writeln("Session file not found: " .. session_file)
     end
 end
 -- 在启动 Neovide 时加载上次会话
 if #vim.fn.argv() == 0 then
-    vim.cmd([[autocmd VimEnter * source ]] .. vim.fn.expand('~') .. [[\AppData\Local\nvim\session1.vim]])
+    local session_file = vim.fn.expand('~') .. [[\AppData\Local\nvim\session1]] .. ".vim"
+    -- 检查文件是否存在
+    if vim.fn.filereadable(session_file) == 1 then
+        -- 如果文件存在，则执行 :source 命令加载会话
+        vim.cmd([[autocmd VimEnter * source ]] .. vim.fn.expand('~') .. [[\AppData\Local\nvim\session1.vim]])
+    else
+        -- 如果文件不存在，则Ruturn
+        return
+    end
 end
