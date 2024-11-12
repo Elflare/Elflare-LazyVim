@@ -47,6 +47,20 @@ require("lazy").setup(
         --     }
         -- },
         {
+            "folke/which-key.nvim",
+            event = "VeryLazy",
+            opts = {},
+            keys = {
+                {
+                    "<leader>?",
+                    function()
+                        require("which-key").show({global = false})
+                    end,
+                    desc = "Buffer Local Keymaps (which-key)"
+                }
+            }
+        },
+        {
             "iamcco/markdown-preview.nvim",
             cmd = {"MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop"},
             ft = {"markdown"},
@@ -151,4 +165,3 @@ require("lazy").setup(
 )
 local Flash = require("flash")
 Flash.toggle()
-
