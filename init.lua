@@ -5,6 +5,7 @@ if vim.g.vscode then
     require("config.keymaps")
     require("plugins.lazynvim-init-vscode")
     require("plugins.nvim-toggler")
+    require("plugins/nvim-treesitter-vscode")
     require("Comment").setup(
         {
             toggler = {

@@ -15,6 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup(
     {
         "numToStr/Comment.nvim",
+        "nvim-treesitter/nvim-treesitter",
         "nguyenvukhang/nvim-toggler",
         {
             "folke/flash.nvim",
@@ -30,6 +31,14 @@ require("lazy").setup(
                         require("flash").jump()
                     end,
                     desc = "Flash"
+                },
+                {
+                    "?",
+                    mode = {"n", "x", "o"},
+                    function()
+                        require("flash").treesitter()
+                    end,
+                    desc = "Flash Treesitter"
                 },
                 {
                     "r",

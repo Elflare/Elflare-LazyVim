@@ -5,7 +5,7 @@ require("nvim-treesitter.configs").setup {
     --{"html", "css", "vim", "lua","javascript", "typescript", "python"},
     -- 启用代码高亮功能
     highlight = {
-        enable = true,
+        enable = false,
         additional_vim_regex_highlighting = false,
         disable = function(lang, buf)
             local max_filesize = 100 * 1024 -- 100 KB
