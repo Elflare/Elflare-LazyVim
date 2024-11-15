@@ -120,6 +120,37 @@ require("lazy").setup(
             }
         },
         {
+            "smoka7/multicursors.nvim",
+            event = "VeryLazy",
+            dependencies = {
+                "nvimtools/hydra.nvim"
+            },
+            opts = {},
+            cmd = {"MCstart", "MCvisual", "MCclear", "MCpattern", "MCvisualPattern", "MCunderCursor"},
+            keys = {
+                {
+                    mode = {"v", "n"},
+                    "<Leader>m",
+                    "<cmd>MCstart<cr>",
+                    desc = "Create a selection for selected text or word under the cursor"
+                }
+            }
+        },
+        {
+            "folke/which-key.nvim",
+            event = "VeryLazy",
+            opts = {},
+            keys = {
+                {
+                    "<leader>?",
+                    function()
+                        require("which-key").show({global = false})
+                    end,
+                    desc = "Buffer Local Keymaps (which-key)"
+                }
+            }
+        },
+        {
             "iamcco/markdown-preview.nvim",
             cmd = {"MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop"},
             ft = {"markdown"},
