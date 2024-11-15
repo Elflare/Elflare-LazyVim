@@ -38,14 +38,73 @@ require("lazy").setup(
         "EdenEast/nightfox.nvim",
         "simnalamburt/vim-mundo",
         "nguyenvukhang/nvim-toggler",
-        --     "rcarriga/nvim-notify",{
-        --   "folke/noice.nvim",
-        --   event = "VeryLazy",
-        --   dependencies = {
-        --     "MunifTanjim/nui.nvim",
-        --     "rcarriga/nvim-notify",
-        --     }
-        -- },
+        -- lazygit
+        {
+            "kdheepak/lazygit.nvim",
+            lazy = true,
+            cmd = {
+                "LazyGit",
+                "LazyGitConfig",
+                "LazyGitCurrentFile",
+                "LazyGitFilter",
+                "LazyGitFilterCurrentFile"
+            },
+            -- optional for floating window border decoration
+            dependencies = {
+                "nvim-lua/plenary.nvim"
+            },
+            -- setting the keybinding for LazyGit with 'keys' is recommended in
+            -- order to load the plugin when the command is run for the first time
+            keys = {
+                {"<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit"}
+            }
+        },
+        {
+            "folke/noice.nvim",
+            event = "VeryLazy",
+            opts = {},
+            dependencies = {
+                --   `nvim-notify` is only needed, if you want to use the notification view.
+                -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+                "MunifTanjim/nui.nvim",
+                -- "rcarriga/nvim-notify"
+            }
+        },
+        -- lazy.nvim:
+        {
+            "smoka7/multicursors.nvim",
+            event = "VeryLazy",
+            dependencies = {
+                "nvimtools/hydra.nvim"
+            },
+            opts = {},
+            cmd = {"MCstart", "MCvisual", "MCclear", "MCpattern", "MCvisualPattern", "MCunderCursor"},
+            keys = {
+                {
+                    mode = {"v", "n"},
+                    "<Leader>m",
+                    "<cmd>MCstart<cr>",
+                    desc = "Create a selection for selected text or word under the cursor"
+                }
+            }
+        },
+        {
+            "smoka7/multicursors.nvim",
+            event = "VeryLazy",
+            dependencies = {
+                "nvimtools/hydra.nvim"
+            },
+            opts = {},
+            cmd = {"MCstart", "MCvisual", "MCclear", "MCpattern", "MCvisualPattern", "MCunderCursor"},
+            keys = {
+                {
+                    mode = {"v", "n"},
+                    "<Leader>m",
+                    "<cmd>MCstart<cr>",
+                    desc = "Create a selection for selected text or word under the cursor"
+                }
+            }
+        },
         {
             "folke/which-key.nvim",
             event = "VeryLazy",

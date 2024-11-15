@@ -56,9 +56,9 @@ keymap.set("i", "<C-v>", "<Esc>pa", {noremap = true})
 -- v 模式下复制
 keymap.set("v", "<C-c>", "y", {noremap = true})
 -- ctrl + w -> :wq
-keymap.set("v", "<C-w>", "<Esc>ZZ", {noremap = true})
-keymap.set("i", "<C-w>", "<Esc>ZZ", {noremap = true})
-keymap.set("n", "<C-w>", "ZZ", {noremap = true})
+-- keymap.set("v", "<C-w>", "<Esc>ZZ", {noremap = true})
+-- keymap.set("i", "<C-w>", "<Esc>ZZ", {noremap = true})
+-- keymap.set("n", "<C-w>", "ZZ", {noremap = true})
 
 -- ctrl z 撤销
 keymap.set("n", "<C-z>", "u", {noremap = true})
@@ -97,4 +97,4 @@ keymap.set("n", "<leader>n", vim.diagnostic.goto_prev, opts)
 -- keymap.set('n', '<leader>u', vim.diagnostic.goto_next, opts)
 keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts)
 -- markdown preview
-keymap.set("n", "<leader>m", ":MarkdownPreview<CR>")
+keymap.set("n", "<leader>d", ":MarkdownPreview<CR>")
