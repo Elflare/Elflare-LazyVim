@@ -59,17 +59,17 @@ require("lazy").setup(
                 {"<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit"}
             }
         },
-        {
-            "folke/noice.nvim",
-            event = "VeryLazy",
-            opts = {},
-            dependencies = {
-                --   `nvim-notify` is only needed, if you want to use the notification view.
-                -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-                "MunifTanjim/nui.nvim",
-                -- "rcarriga/nvim-notify"
-            }
-        },
+        -- {
+        --     "folke/noice.nvim",
+        --     event = "VeryLazy",
+        --     opts = {},
+        --     dependencies = {
+        --         --   `nvim-notify` is only needed, if you want to use the notification view.
+        --         -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+        --         "MunifTanjim/nui.nvim",
+        --         -- "rcarriga/nvim-notify"
+        --     }
+        -- },
         -- lazy.nvim:
         {
             "smoka7/multicursors.nvim",
@@ -85,37 +85,6 @@ require("lazy").setup(
                     "<Leader>m",
                     "<cmd>MCstart<cr>",
                     desc = "Create a selection for selected text or word under the cursor"
-                }
-            }
-        },
-        {
-            "smoka7/multicursors.nvim",
-            event = "VeryLazy",
-            dependencies = {
-                "nvimtools/hydra.nvim"
-            },
-            opts = {},
-            cmd = {"MCstart", "MCvisual", "MCclear", "MCpattern", "MCvisualPattern", "MCunderCursor"},
-            keys = {
-                {
-                    mode = {"v", "n"},
-                    "<Leader>m",
-                    "<cmd>MCstart<cr>",
-                    desc = "Create a selection for selected text or word under the cursor"
-                }
-            }
-        },
-        {
-            "folke/which-key.nvim",
-            event = "VeryLazy",
-            opts = {},
-            keys = {
-                {
-                    "<leader>?",
-                    function()
-                        require("which-key").show({global = false})
-                    end,
-                    desc = "Buffer Local Keymaps (which-key)"
                 }
             }
         },

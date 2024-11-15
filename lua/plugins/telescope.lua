@@ -1,5 +1,6 @@
 local keymap = vim.keymap
 local builtin = require('telescope.builtin')
+-- require("telescope").load_extension("noice")
 keymap.set('n', '<C-p>', builtin.find_files, {})
 keymap.set('n', '<leader>fg', builtin.live_grep, {})
 keymap.set('n', '<leader>fb', builtin.buffers, {})

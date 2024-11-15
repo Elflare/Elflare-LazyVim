@@ -16,6 +16,7 @@ require("lazy").setup(
     {
         "numToStr/Comment.nvim",
         "nvim-treesitter/nvim-treesitter",
+        "nguyenvukhang/nvim-toggler",
         {
             "smoka7/multicursors.nvim",
             event = "VeryLazy",
@@ -33,7 +34,6 @@ require("lazy").setup(
                 }
             }
         },
-        "nguyenvukhang/nvim-toggler",
         {
             "folke/flash.nvim",
             event = "VeryLazy",
