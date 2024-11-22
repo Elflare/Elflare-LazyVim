@@ -30,8 +30,8 @@ require("lazy").setup(
         "yehuohan/cmp-im",
         "yehuohan/cmp-im-zh",
         "nvim-treesitter/nvim-treesitter",
-        "hrsh7th/cmp-vsnip",
-        "hrsh7th/vim-vsnip",
+        -- "hrsh7th/cmp-vsnip",
+        -- "hrsh7th/vim-vsnip",
         "numToStr/Comment.nvim",
         "windwp/nvim-autopairs",
         "petertriho/nvim-scrollbar",
@@ -71,23 +71,6 @@ require("lazy").setup(
         --     }
         -- },
         -- lazy.nvim:
-        {
-            "smoka7/multicursors.nvim",
-            event = "VeryLazy",
-            dependencies = {
-                "nvimtools/hydra.nvim"
-            },
-            opts = {},
-            cmd = {"MCstart", "MCvisual", "MCclear", "MCpattern", "MCvisualPattern", "MCunderCursor"},
-            keys = {
-                {
-                    mode = {"v", "n"},
-                    "<Leader>m",
-                    "<cmd>MCstart<cr>",
-                    desc = "Create a selection for selected text or word under the cursor"
-                }
-            }
-        },
         {
             "smoka7/multicursors.nvim",
             event = "VeryLazy",

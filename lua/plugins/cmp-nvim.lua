@@ -10,8 +10,8 @@ cmp.setup(
         },
         window = {},
         mapping = {
-            -- 选择上一个
-            ["<C-k>"] = cmp.mapping.select_prev_item(),
+            -- shift+tab 选择上一个
+            ["<S-Tab>"] = cmp.mapping.select_prev_item(),
             -- 选择下一个
             ["<Tab>"] = cmp.mapping.select_next_item(),
             -- ['<C-j>'] = cmp.mapping.select_next_item(),
@@ -32,8 +32,12 @@ cmp.setup(
 
             -- -- 向上翻页
             ["<C-u>"] = cmp.mapping.scroll_docs(-4),
+            ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+            ["<C-k>"] = cmp.mapping.scroll_docs(-4),
             -- 向下翻页
-            ["<C-s>"] = cmp.mapping.scroll_docs(4)
+            ["<C-d>"] = cmp.mapping.scroll_docs(4),
+            ["<C-f>"] = cmp.mapping.scroll_docs(4),
+            ["<C-j>"] = cmp.mapping.scroll_docs(4)
         },
         -- 补全来源
         sources = cmp.config.sources(
@@ -41,9 +45,9 @@ cmp.setup(
                 {
                     name = "nvim_lsp"
                 },
-                {
-                    name = "vsnip"
-                },
+                -- {
+                --     name = "vsnip"
+                -- },
                 {
                     name = "buffer",
                     max_item_count = 10
@@ -53,7 +57,9 @@ cmp.setup(
                 },
                 {
                     name = "IM"
-                }
+                },
+                -- 形参补全
+                {name = "nvim_lsp_signature_help"}
             }
         ),
         -- 根据文件类型来选择补全来源
