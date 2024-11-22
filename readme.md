@@ -11,6 +11,8 @@
 | `K`              | 换行             |
 | `H`              | home             |
 | `L`              | end              |
+| `<C-a>`          | home             | insert mod   |
+| `<C-e>`          | end              | insert mod   |
 | `<leader>nh`     | 去高亮           |
 | `<leader>v`      | 搜中文           |
 | `dH`             | 从该行往前删到头 |
