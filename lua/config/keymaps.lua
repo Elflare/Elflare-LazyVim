@@ -13,6 +13,8 @@ keymap.set("v", "H", "^")
 keymap.set("n", "L", "$")
 keymap.set("n", "dL", "d$")
 keymap.set("v", "L", "$")
+keymap.set("i", "<C-a>", "<Home>")
+keymap.set("i", "<C-e>", "<End>")
 -- 复制全部
 keymap.set("n", "gy", ":%y<CR>")
 -- roll down
