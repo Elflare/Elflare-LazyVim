@@ -3,6 +3,7 @@ if vim.g.vscode then
     local opt = vim.opt
     opt.clipboard = "unnamed"
     require("config.keymaps")
+    require("config.options")
     require("plugins.lazynvim-init-vscode")
     require("plugins.nvim-toggler")
     require("plugins/nvim-treesitter-vscode")
@@ -58,7 +59,6 @@ else
     require("plugins.lazynvim-init")
     require("plugins.lspconfig")
     vim.cmd("colorscheme nightfox")
-    -- require('vscode').load('dark')
     require("oil").setup()
     require("plugins.cmp-nvim")
     require("plugins/nvim-tree")
@@ -98,6 +98,15 @@ else
 
     -- 在插件之后覆盖快捷键
     local keymap = vim.keymap
+    -- 注释用ctrl+/
+    local api = require("Comment.api")
+    keymap.set("n", "<C-/>", api.toggle.linewise.current)
+    keymap.set("v", "<C-/>", "<Plug>(comment_toggle_linewise_visual)")
+    keymap.set("i", "<C-/>", api.toggle.linewise.current)
+    -- for windows terminal
+    keymap.set("n", "<C-_>", api.toggle.linewise.current)
+    keymap.set("v", "<C-_>", "<Plug>(comment_toggle_linewise_visual)")
+    keymap.set("i", "<C-_>", api.toggle.linewise.current)
     -- roll down
     keymap.set(
         "n",

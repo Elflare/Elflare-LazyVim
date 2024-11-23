@@ -9,10 +9,10 @@ lspconfig.pylsp.setup {
                 pyflakes = {enabled = false},
                 yapf = {enabled = false},
                 pycodestyle = {enabled = false},
-                pylint = {enabled = false},
-            },
+                pylint = {enabled = false}
+            }
             -- disableOrganizeImports = true
-        },
+        }
         -- python = {
         --     analysis = {
         --         -- Ignore all files for analysis to exclusively use Ruff for linting
@@ -41,3 +41,5 @@ lspconfig.ruff.setup {
 }
 -- c#
 require "lspconfig".csharp_ls.setup {}
+-- yaml
+require'lspconfig'.yamlls.setup{}
