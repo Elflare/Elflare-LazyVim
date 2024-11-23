@@ -1,7 +1,12 @@
 -- 设置 neoformat 的 black 配置
-vim.g.neoformat_python_black = {
-  exe = 'black',
-  args = {'-q', '-'},
+-- vim.g.neoformat_python_black = {
+--   exe = 'black',
+--   args = {'-q', '-'},
+--   stdin = 1
+-- }
+vim.g.neoformat_python_ruff = {
+  exe = 'ruff',
+  args = {'format', '-'},
   stdin = 1
 }
 

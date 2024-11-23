@@ -90,6 +90,7 @@ keymap.set("n", "<C-6>", ":BufferLineGoToBuffer 6<CR>")
 -- 在 ctrl+shift+f格式化
 keymap.set("n", "<C-S-f>", ":Neoformat<CR>")
 keymap.set("i", "<C-S-f>", "<ESC>:Neoformat<CR>a")
+keymap.set("n", "<leader>fo", ":Neoformat<CR>")
 -- 在 mundo
 keymap.set("n", "<leader>u", ":MundoToggle<CR>")
 keymap.set("n", "<F2>", ":IncRename ")
