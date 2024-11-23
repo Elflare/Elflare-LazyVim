@@ -19,8 +19,10 @@ keymap.set("i", "<C-e>", "<End>")
 keymap.set("n", "gy", ":%y<CR>")
 -- roll down
 keymap.set({"n", "v"}, "<C-j>", "<C-d>", {noremap = true, silent = true})
+keymap.set({"n", "v"}, "<C-e>", "4<C-e>", {noremap = true, silent = true})
 -- roll up
 keymap.set({"v", "n"}, "<C-k>", "<C-u>", {noremap = true, silent = true})
+keymap.set({"n", "v"}, "<C-y>", "4<C-y>", {noremap = true, silent = true})
 -- 删除整行
 -- 设置插入模式下的键映射
 keymap.set("i", "<C-D>", "<Esc>ddi")
