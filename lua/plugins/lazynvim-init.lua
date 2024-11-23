@@ -38,6 +38,7 @@ require("lazy").setup(
         "EdenEast/nightfox.nvim",
         "simnalamburt/vim-mundo",
         "nguyenvukhang/nvim-toggler",
+        "brenoprata10/nvim-highlight-colors",
         -- lazygit
         {
             "kdheepak/lazygit.nvim",
