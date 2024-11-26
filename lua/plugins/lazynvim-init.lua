@@ -39,6 +39,29 @@ require("lazy").setup(
         "simnalamburt/vim-mundo",
         "nguyenvukhang/nvim-toggler",
         "brenoprata10/nvim-highlight-colors",
+        {
+            "lukas-reineke/indent-blankline.nvim",
+            main = "ibl",
+            ---@module "ibl"
+            ---@type ibl.config
+            opts = {}
+        },
+        {
+            {
+                "supermaven-inc/supermaven-nvim",
+                config = function()
+                    require("supermaven-nvim").setup(
+                        {
+                            keymaps = {
+                                accept_suggestion = "<C-CR>",
+                                clear_suggestion = "<C-]>",
+                                accept_word = "<C-Right>"
+                            }
+                        }
+                    )
+                end
+            }
+        },
         -- lazygit
         {
             "kdheepak/lazygit.nvim",
