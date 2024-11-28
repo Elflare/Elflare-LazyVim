@@ -56,6 +56,8 @@ keymap.set("i", "<A-S-Down>", "<Esc>:t.<CR>i", {noremap = true})
 
 -- i 模式下粘贴一行
 keymap.set("i", "<C-v>", "<Esc>pa", {noremap = true})
+-- 原来的 c-v 换成 c-c
+keymap.set("i", "<C-c>", "<C-v>", {noremap = true})
 
 -- v 模式下复制
 keymap.set("v", "<C-c>", "y", {noremap = true})
