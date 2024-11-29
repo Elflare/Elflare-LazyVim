@@ -155,11 +155,16 @@ require("lazy").setup(
         },
         "nvim-tree/nvim-tree.lua",
         "christoomey/vim-tmux-navigator",
-        "sbdchd/neoformat",
+        -- "sbdchd/neoformat",
+        -- {
+        --     "nvim-telescope/telescope.nvim",
+        --     dependencies = {"nvim-lua/plenary.nvim"}
+        -- },
         {
-            "nvim-telescope/telescope.nvim",
-            dependencies = {"nvim-lua/plenary.nvim"}
+            "stevearc/conform.nvim",
+            event = "VeryLazy"
         },
+        "nvim-telescope/telescope.nvim",
         "lewis6991/gitsigns.nvim",
         {
             "akinsho/bufferline.nvim",
@@ -171,7 +176,7 @@ require("lazy").setup(
             event = "VeryLazy",
             ---@type Flash.Config
             opts = {},
-            -- stylua: ignore
+            -- stylua: ignore}
             keys = {
                 {
                     "Q",
