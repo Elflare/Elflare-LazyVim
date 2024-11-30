@@ -9,6 +9,7 @@ keymap.set("n", "<leader>v", "/[\\u4E00-\\u9FA5]")
 -- home end
 keymap.set("n", "H", "^")
 keymap.set("n", "dH", "d^")
+keymap.set("n", "yH", "y^")
 keymap.set("v", "H", "^")
 keymap.set("n", "L", "$")
 keymap.set("n", "dL", "d$")
@@ -91,9 +92,23 @@ keymap.set("n", "<C-4>", ":BufferLineGoToBuffer 4<CR>")
 keymap.set("n", "<C-5>", ":BufferLineGoToBuffer 5<CR>")
 keymap.set("n", "<C-6>", ":BufferLineGoToBuffer 6<CR>")
 -- 在 ctrl+shift+f格式化
-keymap.set("n", "<C-S-f>", ":Neoformat<CR>")
-keymap.set("i", "<C-S-f>", "<ESC>:Neoformat<CR>a")
-keymap.set("n", "<leader>fo", ":Neoformat<CR>")
+keymap.set("n", "<C-S-f>",
+    function()
+        require("conform").format()
+    end
+)
+keymap.set("i", "<C-S-f>",
+    function()
+        require("conform").format()
+    end
+)
+keymap.set(
+    "n",
+    "<leader>fo",
+    function()
+        require("conform").format()
+    end
+)
 -- 在 mundo
 keymap.set("n", "<leader>u", ":MundoToggle<CR>")
 keymap.set("n", "<F2>", ":IncRename ")
