@@ -1,9 +1,9 @@
+require("config.keymaps")
+require("config.options")
 if vim.g.vscode then
     -- vscode
     local opt = vim.opt
     opt.clipboard = "unnamed"
-    require("config.keymaps")
-    require("config.options")
     require("plugins.lazynvim-init-vscode")
     require("plugins.nvim-toggler")
     require("plugins/nvim-treesitter-vscode")
@@ -54,8 +54,6 @@ if vim.g.vscode then
     )
 else
     -- 原生vim
-    require("config.options")
-    require("config.keymaps")
     require("plugins.lazynvim-init")
     require("plugins.lspconfig")
     vim.cmd("colorscheme nightfox")
