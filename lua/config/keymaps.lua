@@ -17,6 +17,12 @@ keymap.set("v", "L", "$")
 keymap.set("i", "<C-a>", "<Home>")
 keymap.set("i", "<C-e>", "<End>")
 keymap.set("n", "<F1>", "<C-^>")
+-- tab
+keymap.set("n", "<A-1>", ":tabn 1<CR>")
+keymap.set("n", "<A-2>", ":tabn 2<CR>")
+keymap.set("n", "<A-3>", ":tabn 3<CR>")
+keymap.set("n", "<A-4>", ":tabn 4<CR>")
+keymap.set("n", "<A-5>", ":tabn 5<CR>")
 -- 复制全部
 keymap.set("n", "gy", ":%y<CR>")
 -- roll down
@@ -76,7 +82,7 @@ keymap.set("i", "<C-z>", "<Esc>ua", {noremap = true})
 keymap.set("n", "K", "i<CR><Esc>", {noremap = true})
 -- ---------- 插件 ---------- ---
 -- nvim-tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>e", ":NvimTreeToggle .<CR>")
 keymap.set("n", "<leader>o", ":NvimTreeOpen ")
 -- 切换buffer
 keymap.set("n", "<C-Right>", ":bnext<CR>")
