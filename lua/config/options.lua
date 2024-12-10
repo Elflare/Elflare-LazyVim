@@ -50,12 +50,12 @@ vim.opt.shellxescape = ""
 vim.opt.shellxquote = ""
 vim.opt.shellquote = ""
 -- _视为单词分割
-vim.api.nvim_create_autocmd("BufEnter", {
-	pattern = "*.py,*.gds,*.lua",
-	callback = function()
-		vim.opt_local.iskeyword:remove("_")
-	end,
-})
+-- vim.api.nvim_create_autocmd("BufEnter", {
+-- 	pattern = "*.py,*.gds,*.lua",
+-- 	callback = function()
+-- 		vim.opt_local.iskeyword:remove("_")
+-- 	end,
+-- })
 -- neovide
 if vim.fn.exists("g:neovide") then
 	vim.cmd([[
