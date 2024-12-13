@@ -6,6 +6,7 @@ require("conform").setup(
             python = {"ruff_format"},
             yaml = { "prettier" },
             json = { "prettier" },
+            markdown = { "prettier" },
         },
 		formatters = {
     -- stylua= {

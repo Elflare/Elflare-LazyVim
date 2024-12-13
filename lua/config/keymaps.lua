@@ -126,4 +126,5 @@ keymap.set("n", "<leader>n", vim.diagnostic.goto_prev, opts)
 -- keymap.set('n', '<leader>u', vim.diagnostic.goto_next, opts)
 keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts)
 -- markdown preview
-keymap.set("n", "<leader>d", ":MarkdownPreview<CR>")
+keymap.set("n", "<leader>dt", ":Markview<CR>")
+keymap.set("n", "<leader>ds", ":Markview splitToggle<CR>")
